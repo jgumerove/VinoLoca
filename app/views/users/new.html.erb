@@ -1,6 +1,7 @@
 <h1>Welcome to VinoLoca!!</h1>
 
 <%= form_for @user do |f| %>
+  <%= render partial: "layouts/errors", locals: {record: @user} %>
   <%= f.label :username %>
   <%= f.text_field :username %><br/>
   <%= f.label :email %>
