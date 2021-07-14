@@ -1,5 +1,6 @@
 <h1>Listing of countries</h1>
-
-    <%= @countries.each do |country| %>
-        <h2><%= country.name %></h2>
+<ul>
+    <% @countries.each do |c| %>
+        <li><%= c.name %></li>
     <% end %>
+ </ul>

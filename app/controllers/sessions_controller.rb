@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
         user = User.find_by_username(params[:username])
         if user && user.authenticate(params[:password])
             session[:user_id] = user.id
-            redirect_to user
+            redirect_to user #may render countries path / still need to fix this path
         else
             flash[:errors] = ["Invalid username or password"]
             redirect_to login_path
@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
 
     def logout
         session.clear
-        redirect_to signup_path
+        redirect_to signup_path #may redirect to root path not sure yet
     end
 
 end
