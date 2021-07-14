@@ -7,8 +7,6 @@ Rails.application.routes.draw do
   resources :users
   root to: "sessions#home" #maybe delete not sure of this at the moment
   get "/signup", to: "users#new", as: "signup" #maybe delete not sure of this at the moment
-  get "/wines/new", to: "wines#add"
-  post "/wines", to: "wines#addition"
   get "/login", to: "sessions#login", as: "login"
   post "login", to: "sessions#create"
   delete "/logout", to: "sessions#logout", as: "logout"
