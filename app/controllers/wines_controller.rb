@@ -28,6 +28,7 @@ class WinesController < ApplicationController
     private 
 
     def set_wine
+        @country = Country.find(params[:country_id])
         @wine = Wine.find(params[:id])
         if !@wine
             redirect_to countries_path #note we will change this

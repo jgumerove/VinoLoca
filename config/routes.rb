@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   resources :countries do
-    resources :wines, only: [:index]
+    resources :wines, only: [:index, :show]
   end
-  resources :wines, only: [:new, :create, :show, :edit, :update, :destroy]
+  resources :wines, only: [:new, :create, :edit, :update, :destroy]
 
   resources :users
   root to: "sessions#home" #maybe delete not sure of this at the moment
