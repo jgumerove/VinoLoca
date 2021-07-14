@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :wines
   resources :countries
   resources :users
   root to: "sessions#home" #maybe delete not sure of this at the moment
