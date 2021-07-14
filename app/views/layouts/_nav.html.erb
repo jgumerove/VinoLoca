@@ -1,8 +1,6 @@
 <nav>
  <% if logged_in? %>
-    <p>Welcome <%= current_user.username %></p>
-    <%= link_to "Add A wine to your collection", new_wine_path %> |
-    <%= link_to "Logout", logout_path, method: "delete" %>
+ <%= link_to "Logout", logout_path, method: "delete" %>
   <% else %>
     <%= link_to "Login", login_path %> |
     <%= link_to "Sign up", signup_path %>
