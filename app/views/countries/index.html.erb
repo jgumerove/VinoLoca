@@ -1,6 +1,13 @@
-<h1>Listing of countries</h1>
-<ul>
+<h1>Your Wine Collection Consists of the Below Countries</h1>
+<table>
+  <tr>
+     <th>Country</th>
+     <th>Number of wines</th>
+  </tr>
+  <tr>
     <% @countries.each do |c| %>
-        <li><%= c.name %> - <%= c.wines.count %></li>
+        <td><%= c.name %></td>
+        <td><%= c.wines.count %></td>
+ </tr>
     <% end %>
- </ul>
+ </table>
