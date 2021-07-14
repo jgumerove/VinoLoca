@@ -1,0 +1,8 @@
+<h3>You have the following wines from <%= @country.name %>:</h3>
+<ul>
+<% @wines.each do |wine| %>
+        <li><%= wine.title %></li>
+<% end %>
+</ul>
+
+    

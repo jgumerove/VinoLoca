@@ -13,6 +13,14 @@ class WinesController < ApplicationController
         end
     end
 
+    def index 
+
+        @country = Country.find(params[:country_id])
+      
+        @wines = @country.wines
+            
+   end
+
     def show
         set_wine
     end

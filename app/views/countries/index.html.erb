@@ -6,7 +6,7 @@
   </tr>
   <tr>
     <% @countries.each do |c| %>
-        <td><%= c.name %></td>
+        <td><%= link_to c.name, country_wines_path(c.id) %></td>
         <td><%= c.wines.count %></td>
  </tr>
     <% end %>
