@@ -5,11 +5,11 @@
      <th>Number of wines</th>
   </tr>
   <tr>
-    <% @countries.each do |c| %>
+    <% @countries.uniq.each do |c| %>
         <td><%= link_to c.name, country_wines_path(c.id) %></td>
         <td><%= c.wines.count %></td>
  </tr>
     <% end %>
  </table><br/>
 
- <%= link_to "Add A wine to your collection", new_wine_path %>
+ <%= link_to "Add A wine to your collection", wines_new_path %>

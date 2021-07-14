@@ -1,16 +1,21 @@
 class WinesController < ApplicationController
 
-    def new
+    
+    def add
         @wine = Wine.new
     end
 
-    def create
+    def addition
         @wine = current_user.wines.build(wine_params)
         if @wine.save
-            redirect_to wine_path(@wine)
+            redirect_to country_wine_path(@wine.country, @wine)
         else
-            render :new
+            render :add
         end
+    end
+
+    def new
+        @country = Country.find(params[:country_id])
     end
 
     def index 
