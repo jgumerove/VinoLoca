@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :countries
   resources :users
   get "/login", to: "sessions#login", as: "login"
   post "login", to: "sessions#create"
