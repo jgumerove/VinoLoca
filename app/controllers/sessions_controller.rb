@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
 
+    skip_before_action :authorized, only: [:login, :create, :home]
+
     def login #this is acting as the new method??
     end
 
