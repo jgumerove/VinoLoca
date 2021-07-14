@@ -13,6 +13,10 @@ class WinesController < ApplicationController
         end
     end
 
+    def show
+        @wine = Wine.find(params[:id])
+    end
+
     private 
 
     def wine_params
