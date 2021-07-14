@@ -1,9 +1,10 @@
 class UsersController < ApplicationController
-    def new
+
+    def new #loading the singup form
         @user = User.new
     end
 
-    def create
+    def create #signup 
         @user = User.new(user_params)
         if @user.save
             session[:user_id] = @user.id

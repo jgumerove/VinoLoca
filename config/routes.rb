@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :countries
   resources :users
+  root to: "sessions#home" #maybe delete not sure of this at the moment
+  get "/signup", to: "users#new", as: "signup" #maybe delete not sure of this at the moment
   get "/login", to: "sessions#login", as: "login"
   post "login", to: "sessions#create"
   delete "/logout", to: "sessions#logout", as: "logout"

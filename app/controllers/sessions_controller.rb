@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
 
-    def login
+    def login #this is acting as the new method??
     end
 
     def create
@@ -12,6 +12,9 @@ class SessionsController < ApplicationController
             flash[:errors] = ["Invalid username or password"]
             redirect_to login_path
         end
+    end
+
+    def home #not sure may delete
     end
 
     def logout
