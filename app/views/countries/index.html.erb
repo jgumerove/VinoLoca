@@ -1,6 +1,6 @@
 <h1>Listing of countries</h1>
 <ul>
     <% @countries.each do |c| %>
-        <li><%= c.name %></li>
+        <li><%= c.name %> - <%= c.wines.count %></li>
     <% end %>
  </ul>

@@ -14,10 +14,17 @@ class WinesController < ApplicationController
     end
 
     def show
-        @wine = Wine.find(params[:id])
+        set_wine
     end
 
     private 
+
+    def set_wine
+        @wine = Wine.find(params[:id])
+        if !@wine
+            redirect_to countries_path #note we will change this
+        end
+    end
 
     def wine_params
         params.require(:wine).permit(:title, :category, :year, :rating, :price, :country_id)
