@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
 
     def logout
         session.clear
-        redirect_to new_user_path
+        redirect_to signup_path
     end
 
 end
