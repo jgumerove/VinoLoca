@@ -4,7 +4,10 @@ Rails.application.routes.draw do
   end
   resources :wines, only: [:edit, :update, :destroy]
 
-  resources :users
+  resources :users do
+    resources :countries, only: [:index]
+  end
+  
   root to: "sessions#home" #maybe delete not sure of this at the moment
   get "/signup", to: "users#new", as: "signup" #maybe delete not sure of this at the moment
   get "/wines/new", to: "wines#add"
