@@ -2,11 +2,10 @@ class WinesController < ApplicationController
 
     
     def new
-        if params[:country_id] && country = Country.find_by(params[:country_id])
-        @wine = country.wines.build
+        if params[:country_id] && @country = Country.find_by_id(params[:country_id])
+            @wine = @country.wines.build
         else
             @wine = Wine.new
-            @wine.build_country
         end
     end
 
@@ -33,8 +32,11 @@ class WinesController < ApplicationController
     end
 
     def index 
-        @country = Country.find(params[:country_id])
-        @wines = current_user.wines
+        if params[:country_id] && @country = Country.find_by_id(params[:country_id])
+            @wines = @country.wines
+        else    
+          @wines = Wine.all
+        end
    end
 
     def show
