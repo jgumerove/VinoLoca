@@ -34,7 +34,7 @@ class WinesController < ApplicationController
 
     def index 
         @country = Country.find(params[:country_id])
-        @wines = @country.wines
+        @wines = current_user.wines
    end
 
     def show
