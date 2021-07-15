@@ -20,7 +20,5 @@
   <%= f.collection_select :country_id, Country.all, :id, :name, prompt: true %><br/>
 
   <%= f.submit %>
-
 <% end %>
-
- <%= link_to "View All Countries in Wine Collection", countries_path %>
+ <%= link_to "View All Countries in Collection", countries_path %>
