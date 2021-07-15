@@ -1,6 +1,6 @@
 <h3>You have the following wines from <%= @country.name %>:</h3>
 <ul>
-<% @wines.each do |wine| %>
+<% @wines.each do |wine| %> 
         <li><%= link_to wine.title, country_wine_path(@country.id, wine.id) %></li>
 <% end %>
 </ul>
@@ -10,4 +10,4 @@
   <%= link_to "Add a new Wine to #{@country.name}", new_country_wine_path(@country) %>
 
 
-    
+#currently the above @wines is using all of the users wine -- need to make it so just a wine associated with a specific country
