@@ -33,6 +33,7 @@ class WinesController < ApplicationController
 
     def index 
         if params[:country_id] && @country = Country.find_by_id(params[:country_id])
+            @current_user = current_user
             @wines = @country.wines
         else    
           @wines = Wine.all
