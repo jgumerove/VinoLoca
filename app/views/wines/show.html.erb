@@ -6,6 +6,7 @@
 <h3>Year: <%= @wine.year %></h3>
 <h3>Rating: <%= @wine.rating %></h3>
 <h3>Price: $<%= @wine.price %></h3>
+
 <%= button_to "Delete #{@wine.title}", country_wine_path(@country, @wine), method: :delete %><br/>
 
  <%= link_to "Update #{@wine.title}", edit_country_wine_path(@country, @wine) %> |

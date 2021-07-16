@@ -1,7 +1,14 @@
+
 <% if record.errors.any? %>
+
  <ul class="errors">
+
    <% record.errors.each do |error| %>
+
    <li><%= error.full_message %></li>
+
    <% end %>
+
    </ul>
+   
  <% end %>

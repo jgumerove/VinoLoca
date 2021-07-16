@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
 
     skip_before_action :authorized, only: [:login, :create, :home, :google_omniauth]
 
-    def login #this is acting as the new method??
+    def login 
     end
 
     def create
