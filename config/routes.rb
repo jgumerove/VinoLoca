@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   resources :countries do
-    resources :wines, only: [:index, :show, :new, :create, :destroy]
+    resources :wines, only: [:index, :show, :new, :create, :destroy, :edit, :update]
   end
-  resources :wines, only: [:edit, :update]
+  #resources :wines, only: [:edit, :update]
 
   resources :users
   
