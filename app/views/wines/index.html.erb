@@ -1,12 +1,12 @@
 <h1>You have the following wines from <%= @country.name %>:</h1>
+
 <ul>
-<% country_user_wines(@wines).each do |wine| %> 
+  <% country_user_wines(@wines).each do |wine| %> 
         <li><%= link_to wine.title, country_wine_path(@country.id, wine.id) %></li>
-<% end %>
+  <% end %>
 </ul>
 
   <%= link_to "View All Countries in your Collection", countries_path %> |
-
   <%= link_to "Add a new Wine to #{@country.name}", new_country_wine_path(@country) %>
 
 
