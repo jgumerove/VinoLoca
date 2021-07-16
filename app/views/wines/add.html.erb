@@ -1,6 +1,8 @@
 <h1>Add a wine to your collection</h1>
 
 <%= form_for @wine do |f| %>
+
+  <%= render partial: "layouts/errors", locals: {record: @wine} %>
   <%= f.label :title %>
   <%= f.text_field :title %><br/>
 
