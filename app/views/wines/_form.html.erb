@@ -1,5 +1,7 @@
 <%= form_for ([@country, @wine]) do |f| %>
 
+<%= render partial: "layouts/errors", locals: {record: @wine} %>
+
   <%= f.label :title %>
   <%= f.text_field :title %><br/>
 
