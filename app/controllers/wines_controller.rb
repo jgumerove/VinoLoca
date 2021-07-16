@@ -26,6 +26,7 @@ class WinesController < ApplicationController
 
     def create
         @wine = current_user.wines.build(wine_params)
+        @country = Country.find(params[:country_id])
         if @wine.save
             redirect_to country_wine_path(@wine.country, @wine)
         else
@@ -71,7 +72,7 @@ class WinesController < ApplicationController
     end
 
     def wine_params
-        params.require(:wine).permit(:title, :category, :year, :rating, :price, :country_id)
+        params.require(:wine).permit(:title, :category, :year, :rating, :price, :country_id, country_attributes: [:name])
     end
 
 
