@@ -7,5 +7,8 @@
 <h3>Rating: <%= @wine.rating %></h3>
 <h3>Price: $<%= @wine.price %></h3>
 
- <%= link_to "View All Countries in Collection", countries_path %> 
+ <%= link_to "View All Countries in Collection", countries_path %> |
+ <%= link_to "View All wines from #{@country.name}", country_wines_path(@country)%><br/>
  <%= link_to "Add a new Wine to #{@country.name}", new_country_wine_path(@country) %>
+  
+
