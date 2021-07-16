@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+
+ /* --- Welcome Page Styles --- */
+ body {
+    background-image: url(https://img.favpng.com/9/3/1/wine-background-png-favpng-mCg35t30uWBFCMTYp9ESX4ZZ7.jpg);
+    background-color: lightblue;
+    color: #333;
+    font-family: Sans-Serif;
+    line-height: 18px;
+  }
+
+  h1 { text-align: center;
+      font-family: Georgia, 'Times New Roman', Times, serif; }
+
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+ 

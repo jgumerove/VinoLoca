@@ -50,7 +50,7 @@ class WinesController < ApplicationController
         @country = Country.find(params[:country_id])
         @wine = Wine.find(params[:id])
         if !@wine
-            redirect_to countries_path #note we will change this
+            redirect_to countries_path 
         end
     end
 
