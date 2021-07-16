@@ -1,5 +1,7 @@
 class WinesController < ApplicationController
 
+    before_action :set_wine, only: [:show, :edit, :update]
+
     
     def new
         if params[:country_id] && @country = Country.find_by_id(params[:country_id])
@@ -38,28 +40,20 @@ class WinesController < ApplicationController
         end
    end
 
+   def show
+   end
+
    def edit
-        @wine = Wine.find(params[:id]) 
-        redirect_to countries_path if @wine.user != current_user
-        @country = Country.find(params[:country_id])  
    end
 
    def update
-        @wine = Wine.find(params[:id]) 
-        redirect_to countries_path if @wine.user != current_user
-        @country = Country.find(params[:country_id])
-        if @wine.update(wine_params)
+         if @wine.update(wine_params)
             redirect_to country_wine_path(@country, @wine)
-        else
+          else
             render :edit
         end 
-   end
-
-    def show
-        @wine = Wine.find(params[:id]) 
-        redirect_to countries_path if @wine.user != current_user
-        @country = Country.find(params[:country_id])  
     end
+
 
     def destroy
         @country = Country.find(params[:country_id])
@@ -69,6 +63,12 @@ class WinesController < ApplicationController
     end
 
     private 
+
+    def set_wine
+        @wine = Wine.find(params[:id]) 
+        redirect_to countries_path if @wine.user != current_user
+        @country = Country.find(params[:country_id])  
+    end
 
     def wine_params
         params.require(:wine).permit(:title, :category, :year, :rating, :price, :country_id)
