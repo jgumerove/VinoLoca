@@ -39,15 +39,22 @@ class WinesController < ApplicationController
    end
 
     def show
-        set_wine
+        @wine = Wine.find(params[:id]) 
+        redirect_to countries_path if @wine.user != current_user
+        @country = Country.find(params[:country_id])  
+    end
+
+    def destroy
+        @country = Country.find(params[:country_id])
+        @wine = Wine.find(params[:id])
+        @wine.destroy
+        redirect_to country_wines_path(@country)
     end
 
     private 
 
-    def set_wine
-        @country = Country.find(params[:country_id])
-        @wine = Wine.find(params[:id]) 
-    end
+    #def set_wine   
+    #end
 
     def wine_params
         params.require(:wine).permit(:title, :category, :year, :rating, :price, :country_id)
