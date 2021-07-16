@@ -35,8 +35,6 @@ class WinesController < ApplicationController
         if params[:country_id] && @country = Country.find_by_id(params[:country_id])
             @current_user = current_user
             @wines = @country.wines
-        else    
-          @wines = Wine.all
         end
    end
 
@@ -48,10 +46,7 @@ class WinesController < ApplicationController
 
     def set_wine
         @country = Country.find(params[:country_id])
-        @wine = Wine.find(params[:id])
-        if !@wine
-            redirect_to countries_path 
-        end
+        @wine = Wine.find(params[:id]) 
     end
 
     def wine_params
