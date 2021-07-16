@@ -1,4 +1,4 @@
-<h3>You have the following wines from <%= @country.name %>:</h3>
+<h1>You have the following wines from <%= @country.name %>:</h1>
 <ul>
 <% country_user_wines(@wines).each do |wine| %> 
         <li><%= link_to wine.title, country_wine_path(@country.id, wine.id) %></li>
