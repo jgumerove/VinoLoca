@@ -44,6 +44,17 @@ class WinesController < ApplicationController
         @country = Country.find(params[:country_id])  
    end
 
+   def update
+        @wine = Wine.find(params[:id]) 
+        redirect_to countries_path if @wine.user != current_user
+        @country = Country.find(params[:country_id])
+        if @wine.update(wine_params)
+            redirect_to country_wine_path(@country, @wine)
+        else
+            render :edit
+        end 
+   end
+
     def show
         @wine = Wine.find(params[:id]) 
         redirect_to countries_path if @wine.user != current_user
