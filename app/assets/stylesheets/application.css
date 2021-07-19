@@ -54,4 +54,10 @@
       background-color: #c0c0c0;
     }
 
+.errors {
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  color: crimson;
+}
+
  
