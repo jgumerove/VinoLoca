@@ -18,16 +18,16 @@ class Wine < ApplicationRecord
        (b.to_i-1).times do |i|
         a.insert(n, ',')
         n -= 4
-    end
+     end
        a.join("")
-    else
+     else
         n = -4
         b.to_i.times do |i|
         a.insert(n, ',')
         n -= 4
-    end
+     end
         a.join("")
-    end
+     end
   end
 
 

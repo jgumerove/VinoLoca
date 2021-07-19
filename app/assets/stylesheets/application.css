@@ -34,4 +34,24 @@
   h3 { text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif; }
 
+  table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+  td, th {
+      border: 1px solid #0D0606;
+      text-align: left;
+      padding: 8px;
+    }
+    
+  tr:nth-child(even) {
+      background-color: #FAFAD2;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #c0c0c0;
+    }
+
  
