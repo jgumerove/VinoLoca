@@ -7,6 +7,7 @@ class Wine < ApplicationRecord
   validates :year, numericality: {greater_than_or_equal_to: 1800, less_than_or_equal_to: Date.today.year}
   
   scope :alpha_wine, -> {order(:title)}
+  
 
     def separate_comma
       a = self.price.to_s.split('')
