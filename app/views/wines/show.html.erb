@@ -2,10 +2,11 @@
 
 <h1><%= @wine.title %></h1>
 
-<h3>Category: <%= @wine.category %></h3>
-<h3>Year: <%= @wine.year %></h3>
-<h3>Rating: <%= @wine.rating %></h3>
-<h3>Price: $<%= @wine.separate_comma %></h3>
+
+<h3 class="show">Category: <%= @wine.category %></h3>
+<h3 class="show">Year: <%= @wine.year %></h3>
+<h3 class="show">Rating: <%= @wine.rating %></h3>
+<h3 class="show">Price: $<%= @wine.separate_comma %></h3>
 
 <%= button_to "Delete #{@wine.title}", country_wine_path(@country, @wine), method: :delete %><br/>
 
