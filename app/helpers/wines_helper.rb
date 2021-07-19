@@ -4,7 +4,7 @@ module WinesHelper
     end
 
     def wine_category_array
-        array = [ 'Cabernet Sauvignon', 'Other', 'Merlot', 'Pinot Noir', 'Zinfandel', 'Sauvignon Blanc', 'Riesling', 'Gewürztraminer', 'Chablis', 'Chardonnay', 'Chenin Blanc', 'Pinot Grigio', 'Rosé', 'Champagne', 'Prosecco', 'Brut', 'Grenache', 'Malbec', 'Syrah', 'Moscato', 'Traminer', 'Sauternes', 'Brachetto d’Acqui', 'Lambrusco', 'Port', 'Shiraz', 'Black Muscat', 'Moscato d Asti', 'Ice Wine', 'Sherry', 'Madeira']
+        array = [ 'Cabernet Sauvignon', 'Other', 'Merlot', 'Pinot Noir', 'Zinfandel', 'Sauvignon Blanc', 'Riesling', 'Gewürztraminer', 'Chablis', 'Chardonnay', 'Chenin Blanc', 'Pinot Grigio', 'Rosé', 'Champagne', 'Prosecco', 'Brut', 'Grenache', 'Malbec', 'Syrah', 'Moscato', 'Traminer', 'Sauternes', 'Brachetto d’Acqui', 'Lambrusco', 'Port', 'Shiraz', 'Black Muscat', 'Moscato d Asti', 'Ice Wine', 'Sherry', 'Madeira', 'Burgundy', 'Bordeux' ]
         array.sort!
     end
 
