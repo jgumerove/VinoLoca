@@ -4,6 +4,7 @@ class User < ApplicationRecord
     has_many :countries, through: :wines
     validates :username, :email, uniqueness: true
     validates :username, :email, presence: true
+    validates :password, length: { in: 6..20 }
 
     def self.find_or_create_from_google(user_info)
         find_or_create_by(email: user_info[:email]) do |user|

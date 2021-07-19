@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
         end
     end
 
-    def home #not sure may delete
+    def home 
     end
 
     def logout
