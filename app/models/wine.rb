@@ -5,7 +5,7 @@ class Wine < ApplicationRecord
   validates :price, numericality: {greater_than_or_equal_to: 1}
   validates :rating, numericality: {greater_than_or_equal_to: 0, less_than_or_equal_to: 100}
   validates :year, numericality: {greater_than_or_equal_to: 1800, less_than_or_equal_to: Date.today.year}
-  validate :only_france_wine
+  validate :only_champagne_france
   
   scope :alpha_wine, -> {order(:title)}
   
@@ -32,9 +32,9 @@ class Wine < ApplicationRecord
      end
   end
 
-  def only_france_wine
-    if ["Champagne", "Burgundy", "Bordeux"] && self.country.name != "France"
-      self.errors.add(:category, "#{self.category} can only be from France")
+  def only_champagne_france
+    if self.category.include?("Champagne") && self.country.name != "France"
+      self.errors.add(:category, "Champagne can only be from France")
     end
   end
 
