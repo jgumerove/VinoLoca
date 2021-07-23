@@ -2,12 +2,11 @@ Rails.application.routes.draw do
   resources :countries do
     resources :wines, only: [:index, :show, :new, :create, :destroy, :edit, :update]
   end
-  #resources :wines, only: [:edit, :update]
 
   resources :users
   
-  root to: "sessions#home" #maybe delete not sure of this at the moment
-  get "/signup", to: "users#new", as: "signup" #maybe delete not sure of this at the moment
+  root to: "sessions#home" 
+  get "/signup", to: "users#new", as: "signup" 
   get "/wines/new", to: "wines#add"
   post "/wines", to: "wines#addition"
   get "/login", to: "sessions#login", as: "login"
