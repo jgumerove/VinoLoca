@@ -8,6 +8,7 @@ class Wine < ApplicationRecord
   validate :only_champagne_france
   
   scope :alpha_wine, -> {order(:title)}
+
   
 
     def separate_comma

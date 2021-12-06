@@ -4,5 +4,6 @@ class Country < ApplicationRecord
     validates :name, presence: :true
 
     scope :alpha_country, -> {order(:name)}
+    
 
 end
