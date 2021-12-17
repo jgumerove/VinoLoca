@@ -11,4 +11,5 @@ In order to create the above follow the instructions per the following link: htt
 
 ### Sample Demo Video
 
-A description of how to use this program can be found at the following link: https://www.youtube.com/watch?v=MW_Trxq1N8s&t=338s
+A description of how to use this program can be found at the following link:
+[![VinoLoca](https://img.youtube.com/vi/MW_Trxq1N8s/0.jpg)](https://www.youtube.com/watch?v=MW_Trxq1N8s)
